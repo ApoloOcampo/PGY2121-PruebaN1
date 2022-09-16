@@ -71,7 +71,9 @@ public class usuario {
     }
 
     public void setTelefono(int Telefono) {
-        this.Telefono = Telefono;
+        if(Telefono > 99999999){
+            this.Telefono = Telefono;
+        }
     }
 
     public String getEmail() {
@@ -79,7 +81,8 @@ public class usuario {
     }
 
     public void setEmail(String Email) {
-        this.Email = Email;
+        if(Email.contains("@") && (Email.contains(".com") && (Email.contains(".cl"))))
+            this.Email = Email;
     }
 
     public String getNombreUsuario() {
@@ -87,7 +90,9 @@ public class usuario {
     }
 
     public void setNombreUsuario(String NombreUsuario) {
-        this.NombreUsuario = NombreUsuario;
+        if(NombreUsuario.length() >= 4){
+            this.NombreUsuario = NombreUsuario;
+        }
     }
 
     public String getContrasena() {

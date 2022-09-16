@@ -3,6 +3,7 @@ package prueba1.DTO;
 import java.util.Date;
 
 public class club {
+    private String Rol;
     private String Nombre;
     private String NombreFundador;
     private Date AnoFundacion;
@@ -12,6 +13,7 @@ public class club {
     private int ValorSuscripcion;
     
     public club(){
+        this.Rol = "";
         this.Nombre = "";
         this.NombreFundador = "";
         this.AnoFundacion = new Date();
@@ -19,6 +21,14 @@ public class club {
         this.Lema = "";
         this.Color = "";
         this.ValorSuscripcion = 0;
+    }
+
+    public String getRol() {
+        return Rol;
+    }
+
+    public void setRol(String Rol) {
+        this.Rol = Rol;
     }
 
     public String getNombre() {
