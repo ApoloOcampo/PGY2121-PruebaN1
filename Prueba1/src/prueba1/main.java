@@ -11,7 +11,7 @@ public class main {
         user1.setNombreCompleto("Apolo Ocampo Rios");
         user1.setRut(19019444,'2');
         user1.setFechaNacimiento(new Date());
-        user1.setTelefono(982368710);
+        user1.setTelefono("982368710");
         user1.setEmail("ap.ocampo@duocuc.cl");
         user1.setNombreUsuario("apocampo");
         user1.setContrasena("123456789");

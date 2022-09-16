@@ -9,7 +9,7 @@ public class usuario {
     private int Rut;
     private String Dv;
     private Date FechaNacimiento;
-    private int Telefono;
+    private String Telefono;
     private String Email;
     private String NombreUsuario;
     private String Contrasena;
@@ -20,7 +20,7 @@ public class usuario {
         this.Rut = 0;
         this.Dv = "";
         this.FechaNacimiento = new Date();
-        this.Telefono = 0;
+        this.Telefono = "";
         this.Email = "";
         this.NombreUsuario = "";
         this.Contrasena = "";
@@ -69,18 +69,14 @@ public class usuario {
         this.FechaNacimiento = FechaNacimiento;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return Telefono;
     }
 
-    public void setTelefono(int Telefono) {
-        if(Telefono > 99999999){
+    public void setTelefono(String Telefono) {
+        if(Telefono.length()>8 && Telefono.startsWith("56")){
             this.Telefono = Telefono;
         }
-    }
-
-    public String getEmail() {
-        return Email;
     }
 
     public void setEmail(String Email) {
