@@ -46,8 +46,11 @@ public class usuario {
         return Rut;
     }
 
-    public void setRut(int Rut) {
-        this.Rut = Rut;
+    public void setRut(int rut, char dv) {
+        if (this.validarRut(rut, dv)) {
+            this.Rut = rut;
+            this.Dv = dv + "";
+        }
     }
 
     public String getDv() {
@@ -102,5 +105,22 @@ public class usuario {
     public void setContrasena(String Contrasena) {
         this.Contrasena = Contrasena;
     }
+
+    public boolean validarRut(int rut, char dv) {
+        boolean validacion = false;
+        try {
+            int m = 0, s = 1;
+            for (; rut != 0; rut /= 10) {
+                s = (s + rut % 10 * (9 - m++ % 6)) % 11;
+            }
+            if (dv == (char) (s != 0 ? s + 47 : 75)) {
+                validacion = true;
+            }
+        } catch (java.lang.NumberFormatException e) {
+        } catch (Exception e) {
+        }
+        return validacion;
+    }
     
 }
+

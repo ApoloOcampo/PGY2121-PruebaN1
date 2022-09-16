@@ -5,4 +5,6 @@ import java.util.Date;
 public class suscripcion {
     private Date FechaInicio;
     private club Club;
+    private String TotalPago;
+    
 }
