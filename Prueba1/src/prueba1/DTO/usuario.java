@@ -121,6 +121,19 @@ public class usuario {
         }
         return validacion;
     }
+    private Date ValidarFechaNacimiento(String Fecha){
+        Date FechaNacimiento = ValidarFechaNacimiento(Fecha);
+        if(FechaNacimiento != null){
+            Date actual = new Date();
+            int anoNacimiento = FechaNacimiento.getYear();
+            int anoActual = actual.getYear();
+            if(anoActual - anoNacimiento > 17) {
+                return FechaNacimiento;
+            }
+        }
+        System.out.println("Fecha de nacimiento no valido: " + Fecha); 
+        return null;
+    }
     
 }
 
